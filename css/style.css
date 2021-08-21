@@ -486,6 +486,8 @@ li {
   top: 200px;
   right: 15%;
   max-height: 700px;
+  -webkit-animation: shieldMoveMax 0.5s infinite;
+          animation: shieldMoveMax 0.5s infinite;
 }
 
 .hero__subtitle {
@@ -1876,6 +1878,8 @@ body.lock {
     top: 250px;
     right: 0;
     max-width: 48%;
+    -webkit-animation: shieldMoveMin 1s infinite;
+            animation: shieldMoveMin 1s infinite;
   }
 
   .hero__play::before {

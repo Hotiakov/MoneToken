@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         freeMode: false,
         spaceBetween: 41,
         slidesPerView: 'auto',
-        loopedSlides: 3,
         breakpoints: {
             768: {
                 freeMode: true
