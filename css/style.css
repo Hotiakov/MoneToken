@@ -126,6 +126,8 @@ li {
 }
 
 .btn {
+  display: inline-block;
+  text-align: center;
   position: relative;
   background: -o-linear-gradient(205.32deg, #EF6A40 18.69%, #EE3F3F 86.58%);
   background: linear-gradient(244.68deg, #EF6A40 18.69%, #EE3F3F 86.58%);
@@ -136,6 +138,7 @@ li {
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: 0.5s all;
+  cursor: pointer;
 }
 
 .btn::before {
@@ -488,6 +491,10 @@ li {
   max-height: 700px;
   -webkit-animation: shieldMoveMax 1s infinite;
           animation: shieldMoveMax 1s infinite;
+}
+
+.hero__shild_play {
+  display: none;
 }
 
 .hero__subtitle {
@@ -899,6 +906,40 @@ li {
 .hero__label-3::before,
 .hero__label-3::after {
   background-color: #F41D46;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000b6;
+  opacity: 0;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.popup__wrapper {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+  padding-bottom: 46.25%;
+}
+
+.popup__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .colorful {
@@ -2236,8 +2277,15 @@ body.lock {
     position: relative;
   }
 
-  .hero__content::after {
-    content: url("../img/icons/play.svg");
+  .hero__shild {
+    position: static;
+    max-width: 100%;
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .hero__shild_play {
+    display: block;
     position: absolute;
     bottom: 12%;
     right: 27%;
@@ -2249,13 +2297,7 @@ body.lock {
     background: linear-gradient(270deg, #EF6A40 0.04%, #EE3F3F 100%);
     -webkit-backdrop-filter: blur(9px);
             backdrop-filter: blur(9px);
-  }
-
-  .hero__shild {
-    position: static;
-    max-width: 100%;
-    -webkit-animation: none;
-            animation: none;
+    cursor: pointer;
   }
 
   .hero__subtitle {
@@ -2339,6 +2381,10 @@ body.lock {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .popup__wrapper {
+    width: 90%;
   }
 
   .colorful {
@@ -2638,13 +2684,13 @@ body.lock {
 }
 
 @media (max-width: 767.98px) and (max-width: 479.98px) {
-  .hero__content::after {
+  .hero__shild_play {
     padding: 26px;
   }
 }
 
 @media (max-width: 767.98px) and (max-width: 375px) {
-  .hero__content::after {
+  .hero__shild_play {
     padding: 20px;
   }
 }

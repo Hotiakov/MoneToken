@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const headerBurger = document.querySelector(".header__burger");
-    const headerMenu = document.querySelector(".header__menu");
+    const headerBurger = document.querySelector(".header__burger"),
+        headerMenu = document.querySelector(".header__menu"),
+        popUpBtn = document.querySelector(".circle_bg"),
+        popup = document.querySelector(".popup"),
+        popUpBtn2 = document.querySelector(".hero__shild_play");
     headerBurger.addEventListener('click', () => {
         headerBurger.classList.toggle("active");
         headerMenu.classList.toggle("active");
@@ -45,6 +48,66 @@ document.addEventListener('DOMContentLoaded', () => {
         timerId = setInterval(updateTime, 1000);
     };
     countTimer("25 august 2021, 12:40:00");
+
+    const smoothScroll = finish => {
+        const scrollLength = finish - document.documentElement.scrollTop;
+        const pixelToScroll = scrollLength / 10;
+        let animationId;
+        let sum = document.documentElement.scrollTop;
+        const animate = () => {
+            animationId = requestAnimationFrame(animate);
+            console.log(document.documentElement.scrollTop + 2 < finish);
+            console.log(window.innerHeight + window.pageYOffset < document.body.offsetHeight);
+            if (document.documentElement.scrollTop + 2 < finish) {
+                sum = parseFloat((sum + pixelToScroll).toFixed(10));
+                document.documentElement.scrollTop = parseFloat(sum.toFixed(10));
+            } else {
+                cancelAnimationFrame(animationId);
+            }
+        };
+        animationId = requestAnimationFrame(animate);
+    };
+    const setScrollAnimation = () => {
+        const menuLinks = [...document.querySelectorAll(".header__link")];
+        console.log(menuLinks);
+        menuLinks.forEach(item => {
+            const targetToScroll = document.querySelector(item.getAttribute("href"));
+            item.addEventListener('click', e => {
+                e.preventDefault();
+                headerBurger.classList.remove("active");
+                headerMenu.classList.remove("active");
+                document.body.classList.remove("lock");
+                smoothScroll(targetToScroll.offsetTop);
+            });
+        });
+    };
+    setScrollAnimation();
+
+
+    popUpBtn.addEventListener('click', () => {
+        const wrapper = document.querySelector(".popup__wrapper");
+        popup.style.display = "block";
+        popup.style.opacity = "1";
+        document.body.className = 'lock';
+        wrapper.insertAdjacentHTML("beforeend", `<iframe class="popup__video" src="https://www.youtube.com/embed/LLAgke7QprM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+    });
+    popup.addEventListener('click', () => {
+        const wrapper = document.querySelector(".popup__wrapper");
+        popup.style.display = "none";
+        popup.style.opacity = "0";
+        wrapper.textContent = '';
+        document.body.className = '';
+    });
+    popUpBtn2.addEventListener('click', () => {
+        const wrapper = document.querySelector(".popup__wrapper");
+        popup.style.display = "block";
+        popup.style.opacity = "1";
+        document.body.className = 'lock';
+        wrapper.insertAdjacentHTML("beforeend", `<iframe class="popup__video" src="https://www.youtube.com/embed/LLAgke7QprM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+    });
+
+
+
 
     const examplesSwiper = new Swiper('.examples__wrapper', {
         // Optional parameters
