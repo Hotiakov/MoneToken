@@ -771,6 +771,27 @@ li {
   padding: 3px 8px 8px 8px;
 }
 
+.hero__graph_prices .curPrice {
+  position: absolute;
+  left: 5%;
+  bottom: 56%;
+  -webkit-filter: drop-shadow(0px 0px 35px rgba(255, 255, 255, 0.81));
+          filter: drop-shadow(0px 0px 35px rgba(255, 255, 255, 0.81));
+}
+
+.hero__graph_prices .curPrice::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  -webkit-transform: translateX(-80%);
+      -ms-transform: translateX(-80%);
+          transform: translateX(-80%);
+  width: 57px;
+  height: 57px;
+  background: url("../img/hero/arrowDown.svg") center/contain no-repeat;
+}
+
 .hero__graph_prices .orange {
   bottom: 30%;
   left: 13.3%;
@@ -1980,6 +2001,15 @@ body.lock {
     left: -87%;
   }
 
+  .hero__graph_prices .curPrice::after {
+    top: 20px;
+    -webkit-transform: translateX(-60%);
+        -ms-transform: translateX(-60%);
+            transform: translateX(-60%);
+    width: 47px;
+    height: 47px;
+  }
+
   .hero__company {
     padding-left: 17px;
   }
@@ -2262,6 +2292,16 @@ body.lock {
   .hero__graph_prices .item {
     padding: 3px 5px 5px 5px;
     line-height: 17px;
+  }
+
+  .hero__graph_prices .curPrice {
+    left: 3%;
+  }
+
+  .hero__graph_prices .curPrice::after {
+    top: 15px;
+    width: 32px;
+    height: 32px;
   }
 
   .hero__graph_prices .orange {
@@ -2619,6 +2659,11 @@ body.lock {
     height: 100%;
   }
 
+  .hero__graph_prices .curPrice {
+    left: 0.5%;
+    bottom: 63%;
+  }
+
   .hero__company_wrapper {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2716,6 +2761,7 @@ body.lock {
 .header__btn::after{background:url("../img/icons/present.svg") center/cover no-repeat}
 .header__mobile-btn_mail::after{background:url("../img/icons/mail.svg") center/cover no-repeat}
 .hero__timer_btn::after{background:url("../img/icons/arrowUp.svg") center/cover no-repeat}
+.hero__graph_prices .curPrice::after{background:url("../img/hero/arrowDown.svg") center/contain no-repeat}
 .hero__graph_prices .orange{background:url("../img/hero/orange.svg") center/100% 100% no-repeat}
 .hero__graph_prices .blue{background:url("../img/hero/blue.svg") center/100% 100% no-repeat}
 .hero__graph_prices .pink{background:url("../img/hero/pink.svg") center/100% 100% no-repeat}
