@@ -694,17 +694,99 @@ li {
 }
 
 .hero__graph {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .hero__graph_wrapper {
   margin-bottom: 48px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.hero__graph_mobile {
+.hero__graph_y {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: calc(8px + 3 * ((100vw - 320px) / 1600));
+  line-height: 22px;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.44);
+}
+
+.hero__graph_x {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: calc(7px + 5 * ((100vw - 320px) / 1600));
+  line-height: 22px;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.hero__graph_img {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.hero__graph_img img {
   width: 100%;
-  display: none;
+}
+
+.hero__graph_prices {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-size: calc(8px + 9 * ((100vw - 320px) / 1600));
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+
+.hero__graph_prices .item {
+  line-height: 28px;
+  position: absolute;
+  padding: 3px 8px 8px 8px;
+}
+
+.hero__graph_prices .orange {
+  bottom: 30%;
+  left: 13.3%;
+  background: url("../img/hero/orange.svg") center/100% 100% no-repeat;
+}
+
+.hero__graph_prices .blue {
+  bottom: 43%;
+  left: 45.6%;
+  background: url("../img/hero/blue.svg") center/100% 100% no-repeat;
+}
+
+.hero__graph_prices .pink {
+  bottom: 81%;
+  left: 80.5%;
+  background: url("../img/hero/pink.svg") center/100% 100% no-repeat;
 }
 
 .hero__company {
@@ -2177,14 +2259,21 @@ body.lock {
     width: 60px;
   }
 
-  .hero__graph_mobile {
-    width: 70%;
-    display: block;
-    margin: 0 auto;
+  .hero__graph_prices .item {
+    padding: 3px 5px 5px 5px;
+    line-height: 17px;
   }
 
-  .hero__graph {
-    display: none;
+  .hero__graph_prices .orange {
+    left: 12.3%;
+  }
+
+  .hero__graph_prices .blue {
+    left: 44.6%;
+  }
+
+  .hero__graph_prices .pink {
+    left: 79.5%;
   }
 
   .hero__company {
@@ -2525,8 +2614,9 @@ body.lock {
     width: 100%;
   }
 
-  .hero__graph_mobile {
-    width: 100%;
+  .hero__graph_img img {
+    max-width: 100%;
+    height: 100%;
   }
 
   .hero__company_wrapper {
@@ -2626,6 +2716,9 @@ body.lock {
 .header__btn::after{background:url("../img/icons/present.svg") center/cover no-repeat}
 .header__mobile-btn_mail::after{background:url("../img/icons/mail.svg") center/cover no-repeat}
 .hero__timer_btn::after{background:url("../img/icons/arrowUp.svg") center/cover no-repeat}
+.hero__graph_prices .orange{background:url("../img/hero/orange.svg") center/100% 100% no-repeat}
+.hero__graph_prices .blue{background:url("../img/hero/blue.svg") center/100% 100% no-repeat}
+.hero__graph_prices .pink{background:url("../img/hero/pink.svg") center/100% 100% no-repeat}
 .colorful{background:url("../img/colorful/background.webp") top/cover repeat}
 .monoDiscription__title::before{background:url("../img/colorful/MONO.svg") center/100% 100% no-repeat}
 .monoDiscription__btn::after{background:url("../img/icons/present.svg") center/cover no-repeat}

@@ -6,11 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         headerMenu.classList.toggle("active");
         document.body.classList.toggle("lock");
     });
-    window.addEventListener(`resize`, () => {
-        headerBurger.classList.remove("active");
-        headerMenu.classList.remove("active");
-        document.body.classList.remove("lock");
-    });
 
     const countTimer = deadline => {
         const timerHours = document.querySelector(".hero__hours"),
