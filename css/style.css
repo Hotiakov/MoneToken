@@ -802,19 +802,19 @@ li {
 .hero__graph_prices .orange {
   bottom: 30%;
   left: 13.3%;
-  background: url("../img/hero/orange.svg") center/100% 100% no-repeat;
+  background: url("../img/hero/orange.png") center/100% 100% no-repeat;
 }
 
 .hero__graph_prices .blue {
   bottom: 43%;
   left: 45.6%;
-  background: url("../img/hero/blue.svg") center/100% 100% no-repeat;
+  background: url("../img/hero/blue.png") center/100% 100% no-repeat;
 }
 
 .hero__graph_prices .pink {
   bottom: 81%;
   left: 80.5%;
-  background: url("../img/hero/pink.svg") center/100% 100% no-repeat;
+  background: url("../img/hero/pink.png") center/100% 100% no-repeat;
 }
 
 .hero__company {
@@ -1396,7 +1396,7 @@ li {
 }
 
 .examples__slider {
-  max-height: 550px;
+  height: 700px;
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 85%;
@@ -2116,7 +2116,7 @@ body.lock {
   }
 
   .examples__slider {
-    height: 450px;
+    height: 550px;
   }
 
   .examples__navigation {
@@ -2811,9 +2811,9 @@ body.lock {
 .header__mobile-btn_mail::after{background:url("../img/icons/mail.svg") center/cover no-repeat}
 .hero__timer_btn::after{background:url("../img/icons/arrowUp.svg") center/cover no-repeat}
 .hero__graph_prices .curPrice::after{background:url("../img/hero/arrowDown.svg") center/contain no-repeat}
-.hero__graph_prices .orange{background:url("../img/hero/orange.svg") center/100% 100% no-repeat}
-.hero__graph_prices .blue{background:url("../img/hero/blue.svg") center/100% 100% no-repeat}
-.hero__graph_prices .pink{background:url("../img/hero/pink.svg") center/100% 100% no-repeat}
+.hero__graph_prices .orange{background:url("../img/hero/orange.webp") center/100% 100% no-repeat}
+.hero__graph_prices .blue{background:url("../img/hero/blue.webp") center/100% 100% no-repeat}
+.hero__graph_prices .pink{background:url("../img/hero/pink.webp") center/100% 100% no-repeat}
 .colorful{background:url("../img/colorful/background.webp") top/cover repeat}
 .monoDiscription__title::before{background:url("../img/colorful/MONO.svg") center/100% 100% no-repeat}
 .monoDiscription__btn::after{background:url("../img/icons/present.svg") center/cover no-repeat}

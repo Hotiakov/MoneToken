@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Optional parameters
         slidesPerView: 1,
         spaceBetween: 30,
+        autoHeight: true,
         // If we need pagination
         pagination: {
             el: '.examples__slider_pagination',
