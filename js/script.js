@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         timerId = setInterval(updateTime, 1000);
     };
-    countTimer("25 august 2021, 12:40:00");
+    countTimer("25 november 2021, 12:40:00");
 
     const smoothScroll = finish => {
         const scrollLength = finish - document.documentElement.scrollTop;
